@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C895FA911C24098E005D7BC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C895FA811C24096D005D7BC4 /* Alamofire.framework */; };
 		C895FA931C24099F005D7BC4 /* Alamofire.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = C895FA851C24096D005D7BC4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C895FA971C2410F1005D7BC4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C895FA961C2410F1005D7BC4 /* Default-568h@2x.png */; };
 		C8D46C8F1C224FD100961EC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */; };
 		C8D46C911C224FD100961EC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46C901C224FD100961EC8 /* ViewController.swift */; };
 		C8D46C941C224FD100961EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D46C921C224FD100961EC8 /* Main.storyboard */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		C895FA761C24096D005D7BC4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C895FA961C2410F1005D7BC4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C8D46C8B1C224FD100961EC8 /* moviePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D46C901C224FD100961EC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		C8D46C821C224FD100961EC8 = {
 			isa = PBXGroup;
 			children = (
+				C895FA961C2410F1005D7BC4 /* Default-568h@2x.png */,
 				C8D46C8D1C224FD100961EC8 /* moviePicker */,
 				C8D46CA21C224FD100961EC8 /* moviePickerTests */,
 				C8D46CAD1C224FD100961EC8 /* moviePickerUITests */,
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8D46C991C224FD100961EC8 /* LaunchScreen.storyboard in Resources */,
+				C895FA971C2410F1005D7BC4 /* Default-568h@2x.png in Resources */,
 				C8D46C961C224FD100961EC8 /* Assets.xcassets in Resources */,
 				C8D46C941C224FD100961EC8 /* Main.storyboard in Resources */,
 			);
