@@ -21,11 +21,28 @@ class MovieService {
         //..wait 
         // process data
         
-        let movie = Movie(movieName: movieTitle, rating: 8.1, year: 2002)
         
-        if delegate != nil {
-            delegate?.setMovie(movie)
+        let path = "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5"
+        let url = NSURL(string: path)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            //print(">>>> \(data)")
+            let json = JSON(data: data!)
+            let rating = json["vote_average"].double
+            let id = json["id"].int
+            
+            print("Rating: \(rating!) ID: \(id!)")
+            
+            //self.movieService.getMovie(DeepaksMovie)
+            
         }
+        task.resume()
+
+//        let movie = Movie(movieName: movieTitle, rating: 8.1, year: 2002)
+//        
+//        if delegate != nil {
+//            delegate?.setMovie(movie)
+//        }
         
     }
 }

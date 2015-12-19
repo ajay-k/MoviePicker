@@ -21,23 +21,7 @@ class ViewController: UIViewController,MovieServiceDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.movieService.delegate = self
-        
-        let path = "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5"
-        let url = NSURL(string: path)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            //print(">>>> \(data)")
-            let json = JSON(data: data!)
-            let rating = json["vote_average"].double
-            self.DeepaksChoiceAction.text = "\(rating!)"
-            let DeepaksMovie = self.DeepaksChoiceAction.text!
-            self.movieService.getMovie(DeepaksMovie)
-            print("Rating: \(rating!)")
-
-            
-        }
-        task.resume()
-        
+                
 //        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5")
 //            .responseJSON { response in
 //                print(response)
@@ -50,6 +34,8 @@ class ViewController: UIViewController,MovieServiceDelegate {
     func setMovie(movie: Movie) {
         print("*** Set Weather")
         print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
+        //self.DeepaksChoiceAction.text = "\(rating!)"
+        //let DeepaksMovie = self.DeepaksChoiceAction.text!
 }
     
     override func didReceiveMemoryWarning() {
