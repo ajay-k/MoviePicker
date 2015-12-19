@@ -21,18 +21,23 @@ class MovieService {
         //..wait 
         // process data
         
-        
-        let path = "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5"
+        let movieEscaped = movieTitle.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        let path = "http://api.themoviedb.org/3/search/movie?api_key=c79b9571d2ab98df56637922cb4e93d5&query=\(movieEscaped!)"
         let url = NSURL(string: path)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             //print(">>>> \(data)")
             let json = JSON(data: data!)
-            let rating = json["vote_average"].double
-            let movieTitle = json["original_title"].string
-            let releaseDate = json["release_date"].string
+            let rating = json["results"][0]["vote_average"].double
+            let movieTitle = json["results"][0]["original_title"].string
+            let releaseDate = json["results"][0]["release_date"].string
             
             let movie = Movie(movieName: movieTitle!, rating: rating!, year: releaseDate!)
+            
+            print("\(movieTitle)")
+            print("\n\(rating)")
+            print("\n\(releaseDate)")
+            //let movie = Movie(movieName: "Test")
             
             if self.delegate != nil {
                 

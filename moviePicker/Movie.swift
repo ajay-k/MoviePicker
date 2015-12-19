@@ -13,7 +13,8 @@ struct Movie {
     let rating: Double
     let year: String
     
-    init(movieName: String, rating: Double, year: String) {
+    //init(movieName: String, rating: Double, year: String) {
+    init (movieName: String, rating: Double, year: String) {
         self.movieName = movieName
         self.rating = rating
         self.year = year

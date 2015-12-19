@@ -38,8 +38,7 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     
     //MARK: -Movie Service Delegate 
     func setMovie(movie: Movie) {
-        print("*** Set Weather")
-        print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
+       // print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
         movieTitleLabel.text = movie.movieName
         movieRatingLabel.text = "\(movie.rating)"
         movieDateLabel.text = "\(movie.year)"
@@ -67,7 +66,8 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     }
     
     @IBAction func randomMovieButton(sender: AnyObject) {
-        self.movieService.getMovie(movieChoiceOne.text!)
+        let movieName = movieChoiceOne?.text
+        self.movieService.getMovie(movieName!)
     }
     
     
