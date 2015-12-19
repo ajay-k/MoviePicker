@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C895FA911C24098E005D7BC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C895FA811C24096D005D7BC4 /* Alamofire.framework */; };
 		C895FA931C24099F005D7BC4 /* Alamofire.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = C895FA851C24096D005D7BC4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C895FA9D1C24B0B8005D7BC4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FA9C1C24B0B8005D7BC4 /* SwiftyJSON.swift */; };
+		C895FAA11C24CD2F005D7BC4 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FAA01C24CD2F005D7BC4 /* MovieService.swift */; };
+		C895FAA31C24D646005D7BC4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FAA21C24D646005D7BC4 /* Movie.swift */; };
 		C8D46C8F1C224FD100961EC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */; };
 		C8D46C911C224FD100961EC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46C901C224FD100961EC8 /* ViewController.swift */; };
 		C8D46C941C224FD100961EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D46C921C224FD100961EC8 /* Main.storyboard */; };
@@ -107,6 +110,9 @@
 
 /* Begin PBXFileReference section */
 		C895FA761C24096D005D7BC4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C895FA9C1C24B0B8005D7BC4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
+		C895FAA01C24CD2F005D7BC4 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		C895FAA21C24D646005D7BC4 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C8D46C8B1C224FD100961EC8 /* moviePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D46C901C224FD100961EC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +194,9 @@
 			children = (
 				C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */,
 				C8D46C901C224FD100961EC8 /* ViewController.swift */,
+				C895FAA21C24D646005D7BC4 /* Movie.swift */,
+				C895FAA01C24CD2F005D7BC4 /* MovieService.swift */,
+				C895FA9C1C24B0B8005D7BC4 /* SwiftyJSON.swift */,
 				C8D46C921C224FD100961EC8 /* Main.storyboard */,
 				C8D46C951C224FD100961EC8 /* Assets.xcassets */,
 				C8D46C971C224FD100961EC8 /* LaunchScreen.storyboard */,
@@ -405,8 +414,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C895FA9D1C24B0B8005D7BC4 /* SwiftyJSON.swift in Sources */,
 				C8D46C911C224FD100961EC8 /* ViewController.swift in Sources */,
+				C895FAA11C24CD2F005D7BC4 /* MovieService.swift in Sources */,
 				C8D46C8F1C224FD100961EC8 /* AppDelegate.swift in Sources */,
+				C895FAA31C24D646005D7BC4 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,32 +10,53 @@ import UIKit
 import Foundation
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,MovieServiceDelegate {
 
+    let movieService = MovieService()
+    
     @IBOutlet var selectedMovie: UILabel!
     @IBOutlet var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5", parameters: ["foo": "bar"])
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+        self.movieService.delegate = self
         
+        let path = "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5"
+        let url = NSURL(string: path)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            //print(">>>> \(data)")
+            let json = JSON(data: data!)
+            let rating = json["vote_average"].double
+            self.DeepaksChoiceAction.text = "\(rating!)"
+            let DeepaksMovie = self.DeepaksChoiceAction.text!
+            self.movieService.getMovie(DeepaksMovie)
+            print("Rating: \(rating!)")
+
+            
+        }
+        task.resume()
+        
+//        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5")
+//            .responseJSON { response in
+//                print(response)
+//            let json = JSON(data: data!)
+//        }
         
     }
+    
+    //MARK: -Movie Service Delegate 
+    func setMovie(movie: Movie) {
+        print("*** Set Weather")
+        print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
 }
-        override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
     
     @IBOutlet var DeepaksChoiceAction: UITextField!
@@ -47,21 +68,24 @@ class ViewController: UIViewController {
     @IBOutlet var selectedMovieAction: UITextField!
     
     @IBAction func chooseMovieAction(sender: UIButton) {
-        let random_num = Int(arc4random_uniform(3))
-
-        if (random_num == 0)
-        {
-            selectedMovieAction.text = "\(DeepaksChoiceAction.text!)"
-        }
-        else if (random_num == 1)
-        {
-            selectedMovieAction.text =
-                "\(AjaysChoiceAction.text!)"
-        }
-        else {
-            selectedMovieAction.text =
-                "\(VineetsChoiceAction.text!)"
-        }
+        
+        
+          self.movieService.getMovie(DeepaksChoiceAction.text!)
+//        let random_num = Int(arc4random_uniform(3))
+//
+//        if (random_num == 0)
+//        {
+//            selectedMovieAction.text = "\(DeepaksChoiceAction.text!)"
+//        }
+//        else if (random_num == 1)
+//        {
+//            selectedMovieAction.text =
+//                "\(AjaysChoiceAction.text!)"
+//        }
+//        else {
+//            selectedMovieAction.text =
+//                "\(VineetsChoiceAction.text!)"
+//        }
     }
 }
 
