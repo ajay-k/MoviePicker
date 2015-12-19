@@ -11,9 +11,9 @@ import Foundation
 struct Movie {
     let movieName: String
     let rating: Double
-    let year: Int
+    let year: String
     
-    init(movieName: String, rating: Double, year: Int) {
+    init(movieName: String, rating: Double, year: String) {
         self.movieName = movieName
         self.rating = rating
         self.year = year

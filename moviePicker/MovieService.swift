@@ -29,9 +29,18 @@ class MovieService {
             //print(">>>> \(data)")
             let json = JSON(data: data!)
             let rating = json["vote_average"].double
-            let id = json["id"].int
+            let movieTitle = json["original_title"].string
+            let releaseDate = json["release_date"].string
             
-            print("Rating: \(rating!) ID: \(id!)")
+            let movie = Movie(movieName: movieTitle!, rating: rating!, year: releaseDate!)
+            
+            if self.delegate != nil {
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.delegate?.setMovie(movie)
+                })                
+            }
+           // print(" Movie: \(movieTitle!) \n Rating: \(rating!) \n Release Date: \(releaseDate!)")
             
             //self.movieService.getMovie(DeepaksMovie)
             

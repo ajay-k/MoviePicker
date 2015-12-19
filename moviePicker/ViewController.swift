@@ -10,8 +10,9 @@ import UIKit
 import Foundation
 import Alamofire
 
-class ViewController: UIViewController,MovieServiceDelegate {
+class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate{
 
+  
     let movieService = MovieService()
     
     @IBOutlet var selectedMovie: UILabel!
@@ -30,12 +31,18 @@ class ViewController: UIViewController,MovieServiceDelegate {
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     //MARK: -Movie Service Delegate 
     func setMovie(movie: Movie) {
         print("*** Set Weather")
         print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
-        //self.DeepaksChoiceAction.text = "\(rating!)"
-        //let DeepaksMovie = self.DeepaksChoiceAction.text!
+        movieTitleTextBox.text = movie.movieName
+        movieRatingTextBox.text = "\(movie.rating)"
+        movieDateTextBox.text = "\(movie.year)"
 }
     
     override func didReceiveMemoryWarning() {
@@ -43,20 +50,32 @@ class ViewController: UIViewController,MovieServiceDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBOutlet var movieChoiceOne: UITextField!
+    @IBOutlet var movieChoiceTwo: UITextField!
+    @IBOutlet var movieChoiceThree: UITextField!
 
+    @IBOutlet var movieDateTextBox: UITextField!
+    @IBOutlet var movieRatingTextBox: UITextField!
+    @IBOutlet var movieTitleTextBox: UITextField!
+ 
+    @IBAction func highestRatedButton(sender: AnyObject) {
+        //code
+        
+        //self.movieService.getMovie("Catch me if you can")
+    }
     
-    @IBOutlet var DeepaksChoiceAction: UITextField!
+    @IBAction func randomMovieButton(sender: AnyObject) {
+        self.movieService.getMovie(movieChoiceOne.text!)
+    }
     
-    @IBOutlet var AjaysChoiceAction: UITextField!
     
-    @IBOutlet var VineetsChoiceAction: UITextField!
     
-    @IBOutlet var selectedMovieAction: UITextField!
     
-    @IBAction func chooseMovieAction(sender: UIButton) {
+    //@IBAction func chooseMovieAction(sender: UIButton) {
         
         
-          self.movieService.getMovie(DeepaksChoiceAction.text!)
+         // self.movieService.getMovie(DeepaksChoiceAction.text!)
 //        let random_num = Int(arc4random_uniform(3))
 //
 //        if (random_num == 0)
@@ -72,6 +91,6 @@ class ViewController: UIViewController,MovieServiceDelegate {
 //            selectedMovieAction.text =
 //                "\(VineetsChoiceAction.text!)"
 //        }
-    }
+//}
 }
 
