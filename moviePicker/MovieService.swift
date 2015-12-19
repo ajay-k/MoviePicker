@@ -34,9 +34,9 @@ class MovieService {
             
             let movie = Movie(movieName: movieTitle!, rating: rating!, year: releaseDate!)
             
-            print("\(movieTitle)")
-            print("\n\(rating)")
-            print("\n\(releaseDate)")
+//            print("\(movieTitle)")
+//            print("\n\(rating)")
+//            print("\n\(releaseDate)")
             //let movie = Movie(movieName: "Test")
             
             if self.delegate != nil {

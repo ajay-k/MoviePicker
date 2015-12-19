@@ -18,6 +18,17 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     @IBOutlet var selectedMovie: UILabel!
     @IBOutlet var nameLabel: UILabel!
     
+    @IBOutlet var movieChoiceOne: UITextField!
+    @IBOutlet var movieChoiceTwo: UITextField!
+    @IBOutlet var movieChoiceThree: UITextField!
+    
+    
+    @IBOutlet var movieTitleLabel: UILabel!
+    @IBOutlet var movieRatingLabel: UILabel!
+    @IBOutlet var movieDateLabel: UILabel!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,24 +61,30 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     }
 
     
-    @IBOutlet var movieChoiceOne: UITextField!
-    @IBOutlet var movieChoiceTwo: UITextField!
-    @IBOutlet var movieChoiceThree: UITextField!
-
-    
-    @IBOutlet var movieTitleLabel: UILabel!
-    @IBOutlet var movieRatingLabel: UILabel!
-    @IBOutlet var movieDateLabel: UILabel!
- 
-    @IBAction func highestRatedButton(sender: AnyObject) {
+       @IBAction func highestRatedButton(sender: AnyObject) {
         //code
         
         //self.movieService.getMovie("Catch me if you can")
     }
     
     @IBAction func randomMovieButton(sender: AnyObject) {
-        let movieName = movieChoiceOne?.text
-        self.movieService.getMovie(movieName!)
+        let random_num = Int(arc4random_uniform(3))
+        
+        if (random_num == 0) {
+            let choiceOneMovie = movieChoiceOne?.text
+            self.movieService.getMovie(choiceOneMovie!)
+        }
+        
+        if (random_num == 1) {
+            let choiceTwoMovie = movieChoiceTwo?.text
+            self.movieService.getMovie(choiceTwoMovie!)
+        }
+        if (random_num == 2) {
+            let choiceThreeMovie = movieChoiceThree?.text
+            self.movieService.getMovie(choiceThreeMovie!)
+        }
+
+        
     }
     
     
