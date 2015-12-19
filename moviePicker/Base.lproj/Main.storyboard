@@ -59,14 +59,6 @@
                                     <action selector="randomMovieButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4B-bc-lWZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Movie:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anx-x0-n1F">
-                                <rect key="frame" x="15" y="426" width="339" height="53"/>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-w2-T87">
                                 <rect key="frame" x="209" y="361" width="146" height="49"/>
                                 <color key="backgroundColor" red="0.68618149776220705" green="0.0" blue="0.70618106617647047" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,21 +70,35 @@
                                     <action selector="highestRatedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEX-so-juL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie's Release Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41J-XP-WnT">
-                                <rect key="frame" x="13" y="595" width="341" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie's Rating" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Md6-qG-O06">
-                                <rect key="frame" x="13" y="544" width="341" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie's Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vF9-kp-eSS">
-                                <rect key="frame" x="13" y="498" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgB-UV-58B">
+                                <rect key="frame" x="20" y="502" width="338" height="38"/>
+                                <color key="backgroundColor" red="0.2873954465919894" green="0.3717068592978035" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU9-cy-vvK">
+                                <rect key="frame" x="20" y="555" width="338" height="38"/>
+                                <color key="backgroundColor" red="0.18786644446422124" green="0.70618106617647047" blue="0.44233431519862687" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-sU-s1o">
+                                <rect key="frame" x="19" y="606" width="338" height="41"/>
+                                <color key="backgroundColor" red="0.80302607482583854" green="0.93221275252525249" blue="0.046885460407475044" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Movie:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anx-x0-n1F">
+                                <rect key="frame" x="0.0" y="436" width="375" height="58"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -102,11 +108,10 @@
                         <outlet property="movieChoiceOne" destination="cUR-mf-xJH" id="lSo-AW-jVI"/>
                         <outlet property="movieChoiceThree" destination="osG-IG-TGF" id="8yg-DM-602"/>
                         <outlet property="movieChoiceTwo" destination="uXB-qx-2p3" id="SJS-pb-7Wt"/>
-                        <outlet property="movieDateTextBox" destination="41J-XP-WnT" id="Vqr-ON-NI7"/>
-                        <outlet property="movieRatingTextBox" destination="Md6-qG-O06" id="EVs-T5-hXO"/>
-                        <outlet property="movieTitleTextBox" destination="vF9-kp-eSS" id="yak-ys-PTI"/>
+                        <outlet property="movieDateLabel" destination="CDT-sU-s1o" id="hcB-cF-vNF"/>
+                        <outlet property="movieRatingLabel" destination="pU9-cy-vvK" id="Vgg-fm-juY"/>
+                        <outlet property="movieTitleLabel" destination="JgB-UV-58B" id="iW2-8a-BqD"/>
                         <outlet property="nameLabel" destination="ykW-6n-ikU" id="jHu-qN-LKj"/>
-                        <outlet property="selectedMovie" destination="vF9-kp-eSS" id="MVe-1u-5hb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

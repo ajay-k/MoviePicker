@@ -40,9 +40,9 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     func setMovie(movie: Movie) {
         print("*** Set Weather")
         print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
-        movieTitleTextBox.text = movie.movieName
-        movieRatingTextBox.text = "\(movie.rating)"
-        movieDateTextBox.text = "\(movie.year)"
+        movieTitleLabel.text = movie.movieName
+        movieRatingLabel.text = "\(movie.rating)"
+        movieDateLabel.text = "\(movie.year)"
 }
     
     override func didReceiveMemoryWarning() {
@@ -55,9 +55,10 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     @IBOutlet var movieChoiceTwo: UITextField!
     @IBOutlet var movieChoiceThree: UITextField!
 
-    @IBOutlet var movieDateTextBox: UITextField!
-    @IBOutlet var movieRatingTextBox: UITextField!
-    @IBOutlet var movieTitleTextBox: UITextField!
+    
+    @IBOutlet var movieTitleLabel: UILabel!
+    @IBOutlet var movieRatingLabel: UILabel!
+    @IBOutlet var movieDateLabel: UILabel!
  
     @IBAction func highestRatedButton(sender: AnyObject) {
         //code
