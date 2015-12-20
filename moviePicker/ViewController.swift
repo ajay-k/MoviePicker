@@ -11,8 +11,8 @@ import Foundation
 import Alamofire
 
 class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate{
-
-  
+    
+    
     let movieService = MovieService()
     
     @IBOutlet var selectedMovie: UILabel!
@@ -27,18 +27,18 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
     @IBOutlet var movieRatingLabel: UILabel!
     @IBOutlet var movieDateLabel: UILabel!
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.movieService.delegate = self
-                
-//        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5")
-//            .responseJSON { response in
-//                print(response)
-//            let json = JSON(data: data!)
-//        }
+        
+        //        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/550?api_key=c79b9571d2ab98df56637922cb4e93d5")
+        //            .responseJSON { response in
+        //                print(response)
+        //            let json = JSON(data: data!)
+        //        }
         
     }
     
@@ -47,21 +47,21 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
         return true
     }
     
-    //MARK: -Movie Service Delegate 
+    //MARK: -Movie Service Delegate
     func setMovie(movie: Movie) {
-       // print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
+        // print("Movie: \(movie.movieName) rating:\(movie.rating) year: \(movie.year)")
         movieTitleLabel.text = movie.movieName
         movieRatingLabel.text = "\(movie.rating)"
         movieDateLabel.text = "\(movie.year)"
-}
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-       @IBAction func highestRatedButton(sender: AnyObject) {
+    
+    @IBAction func highestRatedButton(sender: AnyObject) {
         //code
         
         //self.movieService.getMovie("Catch me if you can")
@@ -83,32 +83,7 @@ class ViewController: UIViewController,MovieServiceDelegate, UITextFieldDelegate
             let choiceThreeMovie = movieChoiceThree?.text
             self.movieService.getMovie(choiceThreeMovie!)
         }
-
+        
         
     }
-    
-    
-    
-    
-    //@IBAction func chooseMovieAction(sender: UIButton) {
-        
-        
-         // self.movieService.getMovie(DeepaksChoiceAction.text!)
-//        let random_num = Int(arc4random_uniform(3))
-//
-//        if (random_num == 0)
-//        {
-//            selectedMovieAction.text = "\(DeepaksChoiceAction.text!)"
-//        }
-//        else if (random_num == 1)
-//        {
-//            selectedMovieAction.text =
-//                "\(AjaysChoiceAction.text!)"
-//        }
-//        else {
-//            selectedMovieAction.text =
-//                "\(VineetsChoiceAction.text!)"
-//        }
-//}
 }
-

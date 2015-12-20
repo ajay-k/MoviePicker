@@ -17,8 +17,8 @@ class MovieService {
     var delegate: MovieServiceDelegate?
     
     func getMovie(movieTitle: String) {
-        //request movie data 
-        //..wait 
+        //request movie data
+        //..wait
         // process data
         
         let movieEscaped = movieTitle.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
@@ -34,29 +34,29 @@ class MovieService {
             
             let movie = Movie(movieName: movieTitle!, rating: rating!, year: releaseDate!)
             
-//            print("\(movieTitle)")
-//            print("\n\(rating)")
-//            print("\n\(releaseDate)")
+            //            print("\(movieTitle)")
+            //            print("\n\(rating)")
+            //            print("\n\(releaseDate)")
             //let movie = Movie(movieName: "Test")
             
             if self.delegate != nil {
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.delegate?.setMovie(movie)
-                })                
+                })
             }
-           // print(" Movie: \(movieTitle!) \n Rating: \(rating!) \n Release Date: \(releaseDate!)")
+            // print(" Movie: \(movieTitle!) \n Rating: \(rating!) \n Release Date: \(releaseDate!)")
             
             //self.movieService.getMovie(DeepaksMovie)
             
         }
         task.resume()
-
-//        let movie = Movie(movieName: movieTitle, rating: 8.1, year: 2002)
-//        
-//        if delegate != nil {
-//            delegate?.setMovie(movie)
-//        }
+        
+        //        let movie = Movie(movieName: movieTitle, rating: 8.1, year: 2002)
+        //
+        //        if delegate != nil {
+        //            delegate?.setMovie(movie)
+        //        }
         
     }
 }

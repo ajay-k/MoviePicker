@@ -19,6 +19,7 @@
 		C8D46C991C224FD100961EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D46C971C224FD100961EC8 /* LaunchScreen.storyboard */; };
 		C8D46CA41C224FD100961EC8 /* moviePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46CA31C224FD100961EC8 /* moviePickerTests.swift */; };
 		C8D46CAF1C224FD100961EC8 /* moviePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D46CAE1C224FD100961EC8 /* moviePickerUITests.swift */; };
+		C8FDD0BF1C25CF460046D159 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDD0BE1C25CF460046D159 /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		C8D46CAA1C224FD100961EC8 /* moviePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D46CAE1C224FD100961EC8 /* moviePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviePickerUITests.swift; sourceTree = "<group>"; };
 		C8D46CB01C224FD100961EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FDD0BE1C25CF460046D159 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				C8D46C8E1C224FD100961EC8 /* AppDelegate.swift */,
 				C8D46C901C224FD100961EC8 /* ViewController.swift */,
 				C895FAA21C24D646005D7BC4 /* Movie.swift */,
+				C8FDD0BE1C25CF460046D159 /* Rating.swift */,
 				C895FAA01C24CD2F005D7BC4 /* MovieService.swift */,
 				C895FA9C1C24B0B8005D7BC4 /* SwiftyJSON.swift */,
 				C8D46C921C224FD100961EC8 /* Main.storyboard */,
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FDD0BF1C25CF460046D159 /* Rating.swift in Sources */,
 				C895FA9D1C24B0B8005D7BC4 /* SwiftyJSON.swift in Sources */,
 				C8D46C911C224FD100961EC8 /* ViewController.swift in Sources */,
 				C895FAA11C24CD2F005D7BC4 /* MovieService.swift in Sources */,
